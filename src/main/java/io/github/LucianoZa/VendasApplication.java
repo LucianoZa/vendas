@@ -8,6 +8,7 @@ package io.github.LucianoZa;
     import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
+//@ComponentScan() normalmente desnecessário explicitar! Necessario caso haja projeto externo.
 @RestController
 public class VendasApplication {
 
