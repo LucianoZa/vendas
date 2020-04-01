@@ -1,5 +1,7 @@
 package io.github.LucianoZa;
 
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.beans.factory.annotation.Qualifier;
     import org.springframework.boot.SpringApplication;
     import org.springframework.boot.autoconfigure.SpringBootApplication;
     import org.springframework.web.bind.annotation.GetMapping;
@@ -9,9 +11,13 @@ package io.github.LucianoZa;
 @RestController
 public class VendasApplication {
 
+    @Autowired
+    @Qualifier("applicationName")
+    private String applicationName;
+
     @GetMapping("/hello")
     public String helloworld() {
-        return "Hello World!";
+        return applicationName; //"Hello World!";
     }
 
     public static void main(String[] args) {
