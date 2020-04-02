@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ClientesService {
 
-    private ClientesRepository repository];
+    private ClientesRepository repository;
 
     @Autowired
     public ClientesService(ClientesRepository repository){
